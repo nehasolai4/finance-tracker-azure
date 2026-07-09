@@ -14,30 +14,37 @@ def home():
 @app.route("/login", methods=["GET","POST"])
 def login():
 
-    if request.method=="POST":
+    try:
 
-        username=request.form["username"]
-        password=request.form["password"]
+        if request.method=="POST":
 
-        conn=get_connection()
-        cursor=conn.cursor()
+            username=request.form["username"]
+            password=request.form["password"]
 
-        cursor.execute(
-            "SELECT * FROM Users WHERE username=? AND password=?",
-            (username,password)
-        )
+            conn=get_connection()
+            cursor=conn.cursor()
 
-        user=cursor.fetchone()
+            cursor.execute(
+                "SELECT * FROM Users WHERE username=? AND password=?",
+                (username,password)
+            )
 
-        cursor.close()
-        conn.close()
+            user=cursor.fetchone()
 
-        if user:
-            return redirect("/dashboard")
-        else:
-            return "Invalid Credentials"
+            cursor.close()
+            conn.close()
 
-    return render_template("login.html")
+            if user:
+                return redirect("/dashboard")
+            else:
+                return "Invalid Credentials"
+
+        return render_template("login.html")
+    
+    except Exception as e:
+        import traceback
+        print(traceback.format_exc())
+        return str(e), 500
 
 
 @app.route("/dashboard")
