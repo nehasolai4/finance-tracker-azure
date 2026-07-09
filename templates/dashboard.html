@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>💰 Personal Finance Dashboard</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Budget</h3>
+            <h2>₹ {{ budget }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Expenses</h3>
+            <h2>₹ {{ expense }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Remaining</h3>
+            <h2>₹ {{ remaining }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Investments</h3>
+            <h2>₹ {{ investment }}</h2>
+        </div>
+
+    </div>
+
+    <div class="button-container">
+
+        <a href="/add-expense" class="btn">Add Expense</a>
+
+        <a href="/set-budget" class="btn">Set Budget</a>
+
+        <a href="/add-investment" class="btn">Add Investment</a>
+
+        <a href="/upload" class="btn">Upload Receipt</a>
+
+    </div>
+
+    <h2 class="expense-heading">Recent Expenses</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Title</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Date</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for e in expenses %}
+
+            <tr>
+
+                <td>{{ e[0] }}</td>
+                <td>{{ e[1] }}</td>
+                <td>₹ {{ e[2] }}</td>
+                <td>{{ e[3] }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>

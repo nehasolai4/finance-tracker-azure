@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Upload Receipt</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h2>Upload Receipt</h2>
+
+<form method="POST"
+enctype="multipart/form-data">
+
+<input
+type="file"
+name="receipt"
+required>
+
+<button>
+
+Upload
+
+</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

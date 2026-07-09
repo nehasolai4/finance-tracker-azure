@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#eef4fb;
+    padding:40px;
+}
+
+/* Login */
+
+.login-box{
+
+    width:380px;
+    margin:100px auto;
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.login-box h2{
+    margin-bottom:25px;
+    text-align:center;
+}
+
+input{
+
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+
+}
+
+button{
+
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#0078D4;
+    color:white;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#005fa3;
+
+}
+
+/* Dashboard */
+
+h1{
+
+    text-align:center;
+    margin-bottom:40px;
+    color:#003b6f;
+
+}
+
+.cards{
+
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+
+}
+
+.card{
+
+    width:220px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,.1);
+
+}
+
+.card h3{
+
+    color:#666;
+    margin-bottom:15px;
+
+}
+
+.card h2{
+
+    color:#0078D4;
+    font-size:32px;
+
+}
+
+/* Buttons */
+
+.button-container{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    text-decoration:none;
+    background:#0078D4;
+    color:white;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#005fa3;
+
+}
+
+/* Table */
+
+.expense-heading{
+
+    text-align:center;
+    margin-bottom:20px;
+    color:#003b6f;
+
+}
+
+table{
+
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 12px rgba(0,0,0,.1);
+
+}
+
+th{
+
+    background:#0078D4;
+    color:white;
+    padding:15px;
+
+}
+
+td{
+
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+
+}
+
+tr:hover{
+
+    background:#f7fbff;
+
+}
