@@ -73,4 +73,5 @@ jobs:
         with:
           app-name: 'finance-tracker-neha'
           slot-name: 'Production'
+          package: .
           
